@@ -9,7 +9,7 @@
       <div class="container" v-show="!store.backgroundShow">
         <section class="all" v-show="!store.setOpenState">
           <MainLeft />
-          <span style="width: 10rem;"></span>
+          <!-- <span style="width: 10rem;"></span> -->
           <MainRight v-show="!store.boxOpenState" />
           <Box v-show="store.boxOpenState" />
         </section>

@@ -97,7 +97,7 @@ watch(
     max-width: 460px;
     .logo-img {
       border-radius: 50%;
-      width: 60px;
+      width: 100px;
     }
     .name {
       width: 100%;
@@ -107,7 +107,7 @@ watch(
     
       .bg {
         font-family: 'Saira Semi Condensed', sans-serif;
-        font-size: 4rem;
+        font-size: 3rem;
       }
 
       .sm {
@@ -123,9 +123,11 @@ watch(
         width: 100px;
       }
       .name {
-        height: 128px;
+        //height: 128px;
         .bg {
-          font-size: 4.5rem;
+          font-family: 'Saira Semi Condensed', sans-serif;
+
+          font-size: 2.5rem;
         }
       }
     }
