@@ -9,6 +9,7 @@
       <div class="container" v-show="!store.backgroundShow">
         <section class="all" v-show="!store.setOpenState">
           <MainLeft />
+          <span style="width: 10rem;"></span>
           <MainRight v-show="!store.boxOpenState" />
           <Box v-show="store.boxOpenState" />
         </section>
@@ -79,14 +80,14 @@ onMounted(() => {
   cursorInit();
 
   // 屏蔽右键
-  document.oncontextmenu = () => {
-    ElMessage({
-      message: "为了浏览体验，本站禁用右键",
-      grouping: true,
-      duration: 2000,
-    });
-    return false;
-  };
+  // document.oncontextmenu = () => {
+  //   ElMessage({
+  //     message: "为了浏览体验，本站禁用右键",
+  //     grouping: true,
+  //     duration: 2000,
+  //   });
+  //   return false;
+  // };
 
   // 鼠标中键事件
   window.addEventListener("mousedown", (event) => {
@@ -145,7 +146,7 @@ onBeforeUnmount(() => {
       padding: 0 0.75rem;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      //justify-content: center;
       align-items: center;
     }
     .more {

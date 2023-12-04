@@ -5,8 +5,8 @@
     <div class="logo">
       <img class="logo-img" :src="siteLogo" alt="logo" />
       <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
-        <span class="bg">{{ siteUrl[0] }}</span>
-        <span class="sm">.{{ siteUrl[1] }}</span>
+        <span class="bg">{{ siteName}}</span>
+        <!-- <span class="sm">.{{ siteUrl[1] }}</span> -->
       </div>
     </div>
     <!-- 简介 -->
@@ -34,6 +34,7 @@ import { Error } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
 const store = mainStore();
 
+const siteName = import.meta.env.VITE_SITE_NAME;
 // 主页站点logo
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
@@ -86,6 +87,7 @@ watch(
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googlefonts.cn/css?family=Saira+Semi+Condensed');
 .message {
   .logo {
     display: flex;
@@ -95,16 +97,17 @@ watch(
     max-width: 460px;
     .logo-img {
       border-radius: 50%;
-      width: 120px;
+      width: 60px;
     }
     .name {
       width: 100%;
       padding-left: 22px;
-      transform: translateY(-8px);
-      font-family: "Pacifico-Regular";
-
+      //transform: translateY(-8px);
+      font-family: 'Saira Semi Condensed', sans-serif;
+    
       .bg {
-        font-size: 5rem;
+        font-family: 'Saira Semi Condensed', sans-serif;
+        font-size: 4rem;
       }
 
       .sm {
@@ -149,7 +152,7 @@ watch(
 
         p {
           &:nth-of-type(1) {
-            font-family: "Pacifico-Regular";
+            
           }
         }
       }
