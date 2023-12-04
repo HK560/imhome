@@ -11,10 +11,10 @@
       />
     </transition>
     <el-row :gutter="40">
-      <el-col :span="12" class="left">
+      <el-col :span="12" class="left" >
         <div class="logo text-hidden">
-          <span class="bg">{{ siteUrl[0] }}</span>
-          <span class="sm">.{{ siteUrl[1] }}</span>
+          <span class="bg">{{ siteName }}</span>
+          <!-- <span class="sm">.{{ siteUrl[1] }}</span> -->
         </div>
         <div class="version">
           <div class="num">v&nbsp;{{ config.version }}</div>
@@ -25,18 +25,19 @@
         <el-card class="update">
           <template #header>
             <div class="card-header">
-              <span>更新日志</span>
+              <span>Thanks to imsyy</span>
             </div>
           </template>
+          <!-- <span>imsyy</span> -->
           <div class="upnote">
-            <div v-for="item in upData.new" :key="item" class="uptext">
+            <!-- <div v-for="item in upData.new" :key="item" class="uptext">
               <add-one theme="outline" size="22" />
               {{ item }}
             </div>
             <div v-for="item in upData.fix" :key="item" class="uptext">
               <bug theme="outline" size="22" />
               {{ item }}
-            </div>
+            </div> -->
           </div>
         </el-card>
       </el-col>
@@ -56,6 +57,7 @@ import { CloseOne, SettingTwo, GithubOne, AddOne, Bug } from "@icon-park/vue-nex
 import { mainStore } from "@/store";
 import Set from "@/components/Set.vue";
 import config from "@/../package.json";
+const siteName = import.meta.env.VITE_SITE_NAME;
 
 const store = mainStore();
 const closeShow = ref(false);
@@ -90,6 +92,8 @@ const jumpTo = (url) => {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googlefonts.cn/css?family=Saira+Semi+Condensed');
+
 .set {
   position: absolute;
   top: 50%;
@@ -138,7 +142,8 @@ const jumpTo = (url) => {
         height: 260px;
 
         .bg {
-          font-size: 5rem;
+        font-family: 'Saira Semi Condensed', sans-serif;
+          font-size: 3rem;
         }
 
         .sm {
