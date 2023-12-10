@@ -51,37 +51,37 @@ export default ({ mode }) =>
           background_color: "#424242",
           icons: [
             {
-              src: "/images/icon/48.png",
+              src: "/images/icon/logo.png",
               sizes: "48x48",
               type: "image/png",
             },
             {
-              src: "/images/icon/72.png",
+              src: "/images/icon/logo.png",
               sizes: "72x72",
               type: "image/png",
             },
             {
-              src: "/images/icon/96.png",
+              src: "/images/icon/logo.png",
               sizes: "96x96",
               type: "image/png",
             },
             {
-              src: "/images/icon/128.png",
+              src: "/images/icon/logo.png",
               sizes: "128x128",
               type: "image/png",
             },
             {
-              src: "/images/icon/144.png",
+              src: "/images/icon/logo.png",
               sizes: "144x144",
               type: "image/png",
             },
             {
-              src: "/images/icon/192.png",
+              src: "/images/icon/logo.png",
               sizes: "192x192",
               type: "image/png",
             },
             {
-              src: "/images/icon/512.png",
+              src: "/images/icon/logo.png",
               sizes: "512x512",
               type: "image/png",
             },

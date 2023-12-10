@@ -1,27 +1,18 @@
 <template>
-  <div
-    class="hitokoto cards"
-    v-show="!store.musicOpenState"
-    @mouseenter="openMusicShow = true"
-    @mouseleave="openMusicShow = false"
-    @click.stop
-  >
+  <div class="hitokoto cards" v-show="!store.musicOpenState" @mouseenter="openMusicShow = true"
+    @mouseleave="openMusicShow = false" @click.stop>
     <!-- 打开音乐面板 -->
     <Transition name="el-fade-in-linear">
-      <div
-        class="open-music"
-        v-show="openMusicShow && store.musicIsOk"
-        @click="store.musicOpenState = true"
-      >
+      <div class="open-music" v-show="openMusicShow && store.musicIsOk" @click="store.musicOpenState = true">
         <music-menu theme="filled" size="18" fill="#efefef" />
         <span>打开音乐播放器</span>
       </div>
     </Transition>
     <!-- 一言内容 -->
     <Transition name="el-fade-in-linear" mode="out-in">
-      <div :key="hitokotoData.text" class="content" @click="updateHitokoto">
-        <span class="text">{{ hitokotoData.text }}</span>
-        <span class="from">-「&nbsp;{{ hitokotoData.from }}&nbsp;」</span>
+      <div :key="myInfoData.text" class="content" @click="getNewInfoData">
+        <span class="text">{{ myInfoData.text }}</span>
+        <span :v-if="myInfoData.text2 != ''" class="text">&nbsp;{{ myInfoData.text2 }}&nbsp;</span>
       </div>
     </Transition>
   </div>
@@ -43,6 +34,40 @@ const hitokotoData = reactive({
   text: "这里应该显示一句话",
   from: "無名",
 });
+
+const myInfoData = reactive({
+  text: "这里应该显示一句话",
+  text2: "無名",
+});
+
+const myInfoArray = [
+  {
+    text: '与光同尘',
+    text2: 'With Light'
+  },
+  {
+    text: '永远年轻，永远声名狼藉',
+    text2: ''
+  }
+]
+
+var randomIndex = -1;
+
+function getNewInfoData() {
+  if (randomIndex == -1) {
+    randomIndex = Math.floor(Math.random() * myInfoArray.length); // 生成随机索引
+  }
+  else {
+    if (randomIndex < myInfoArray.length - 1) {
+      ++randomIndex;
+    } else {
+      randomIndex = 0;
+    }
+  }
+  console.log(randomIndex);
+  myInfoData.text = myInfoArray[randomIndex].text; // 根据随机索引获取随机值并赋给randomValue变量
+  myInfoData.text2 = myInfoArray[randomIndex].text2; // 根据随机索引获取随机值并赋给randomValue变量
+};
 
 // 获取一言数据
 const getHitokotoData = () => {
@@ -73,6 +98,7 @@ const updateHitokoto = () => {
 };
 
 onMounted(() => {
+  getNewInfoData();
   getHitokotoData();
 });
 </script>
@@ -83,6 +109,7 @@ onMounted(() => {
   height: 100%;
   padding: 20px;
   animation: fade 0.5s;
+
   .open-music {
     width: 100%;
     position: absolute;
@@ -94,30 +121,36 @@ onMounted(() => {
     background: #00000026;
     padding: 4px 0;
     border-radius: 8px 8px 0 0;
+
     .i-icon {
       width: 18px;
       height: 18px;
       display: block;
       margin-right: 8px;
     }
+
     span {
       font-size: 0.95rem;
     }
   }
+
   .content {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
     .text {
       font-size: 1.1rem;
       word-break: break-all;
       text-overflow: ellipsis;
       overflow: hidden;
-      display: -webkit-box;
+      display: flex;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+      justify-content: center;
     }
+
     .from {
       margin-top: 10px;
       font-weight: bold;
