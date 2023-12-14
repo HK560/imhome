@@ -1,5 +1,5 @@
 <template>
-  <div class="hitokoto cards" v-show="!store.musicOpenState" @mouseenter="openMusicShow = true"
+  <div class="hitokoto cards" @mouseenter="openMusicShow = true"
     @mouseleave="openMusicShow = false" @click.stop>
     <!-- 打开音乐面板 -->
     <Transition name="el-fade-in-linear">
