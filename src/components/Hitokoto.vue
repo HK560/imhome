@@ -48,6 +48,10 @@ const myInfoArray = [
   {
     text: '永远年轻，永远声名狼藉',
     text2: ''
+  },
+  {
+    text: '哪有什么乐观，只是健忘罢了',
+    text2: ''
   }
 ]
 
