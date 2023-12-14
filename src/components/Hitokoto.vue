@@ -52,6 +52,10 @@ const myInfoArray = [
   {
     text: '哪有什么乐观，只是健忘罢了',
     text2: ''
+  },
+  {
+    text: '遗忘不是终点',
+    text2: '死亡才是'
   }
 ]
 
