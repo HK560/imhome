@@ -10,8 +10,19 @@
     "link": "https://onedrive.elbadaernu.com/"
   },
   {
+    "icon": "Link",
+    "name": "『ACG++』",
+    "link": "https://acgplus.plus/"
+  },
+  {
     "icon": "CompactDisc",
     "name": "TS服务器",
     "link": "https://teamspeak.hk560.workers.dev/"
+  },
+  {
+    "icon": "Server",
+    "name": "服务器状态",
+    "link": "https://server.elbadaernu.com/status/total"
   }
+
 ]
