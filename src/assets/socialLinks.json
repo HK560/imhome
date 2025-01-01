@@ -1,21 +1,27 @@
 [
   {
+    "name": "X",
+    "icon": "/images/icon/X_logo_2023.svg",
+    "tip": "我在 X",
+    "url": "https://twitter.com/_HK560_"
+  },
+  {
     "name": "Github",
     "icon": "/images/icon/github.png",
     "tip": "我在 Github",
     "url": "https://github.com/HK560"
   },
   {
+    "name": "Steam",
+    "icon": "/images/icon/steam.svg",
+    "tip": "我在 Steam",
+    "url": "https://steamcommunity.com/profiles/76561198136343255/"
+  },
+  {
     "name": "BiliBili",
     "icon": "/images/icon/bilibili.png",
     "tip": "我在 Bilibili",
     "url": "https://space.bilibili.com/7342356"
-  },
-  {
-    "name": "Twitter",
-    "icon": "/images/icon/twitter.png",
-    "tip": "我在 Twitter",
-    "url": "https://twitter.com/_HK560_"
   },
   {
     "name": "QQ",
@@ -27,6 +33,6 @@
     "name": "Email",
     "icon": "/images/icon/email.png",
     "tip": "使用邮件联系我",
-    "url": "elbadaernu@qq.top"
+    "url": "hk.560@qq.com"
   }
 ]

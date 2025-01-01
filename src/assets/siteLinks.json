@@ -23,6 +23,20 @@
     "icon": "Server",
     "name": "服务器状态",
     "link": "https://server.elbadaernu.com/status/total"
+  },
+  {
+    "icon": "Tools",
+    "name": "工具站",
+    "link": "https://tools.elbadaernu.com/"
+  },
+  {
+    "icon": "BoxOpen",
+    "name": "驿站",
+    "link": "https://box.elbadaernu.com/#/"
+  },
+  {
+    "icon": "AlignLeft",
+    "name": "ACG++统计",
+    "link": "https://umami.elbadaernu.com/share/XD0pR91DQrrnh2rb/acgplus.plus"
   }
-
 ]
